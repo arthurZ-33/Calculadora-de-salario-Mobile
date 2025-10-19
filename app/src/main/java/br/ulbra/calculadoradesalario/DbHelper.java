@@ -36,7 +36,7 @@ public class DbHelper extends SQLiteOpenHelper {
                 + COL_EMAIL + " VARCHAR(122) NOT NULL UNIQUE, "
                 + COL_SENHA + " VARCHAR(122) NOT NULL, "
                 + COL_SALARIO + " DECIMAL(10, 2) NOT NULL, CONSTRAINT CHK_SALARIO CHECK(" + COL_SALARIO + " > 0), "
-                + COL_FILHO + " INTEGER, CONSTRAINT CHK_FILHO CHECK(" + COL_FILHO + " >= 0), "
+                + COL_FILHO + "INTEGER, CONSTRAINT CHK_FILHO CHECK(" + COL_FILHO + " >= 0), "
                 + COL_SEXO + " BOOLEAN NOT NULL"
                 + " )";
 
@@ -80,7 +80,7 @@ public class DbHelper extends SQLiteOpenHelper {
         String selection = COL_EMAIL + " = ? AND " + COL_SENHA + " = ?";
         String[] selectionArgs = {email, senha};
 
-      
+
         Cursor cursor = db.query(
                 TABLE_USUARIOS,
                 columns,
