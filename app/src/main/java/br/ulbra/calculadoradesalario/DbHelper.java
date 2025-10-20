@@ -17,9 +17,6 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String COL_NOME = "NOME";
     private static final String COL_EMAIL = "EMAIL";
     private static final String COL_SENHA = "SENHA";
-    private static final String COL_SALARIO = "SALARIO";
-    private static final String COL_FILHO = "FILHOS";
-    private static final String COL_SEXO = "SEXO";
 
 
     public DbHelper(Context context) {
@@ -35,9 +32,6 @@ public class DbHelper extends SQLiteOpenHelper {
                 + COL_NOME + " VARCHAR(80) NOT NULL, "
                 + COL_EMAIL + " VARCHAR(122) NOT NULL UNIQUE, "
                 + COL_SENHA + " VARCHAR(122) NOT NULL, "
-                + COL_SALARIO + " DECIMAL(10, 2) NOT NULL, CONSTRAINT CHK_SALARIO CHECK(" + COL_SALARIO + " > 0), "
-                + COL_FILHO + "INTEGER, CONSTRAINT CHK_FILHO CHECK(" + COL_FILHO + " >= 0), "
-                + COL_SEXO + " BOOLEAN NOT NULL"
                 + " )";
 
         db.execSQL(SQL_CREATE_TABLE);
@@ -52,17 +46,13 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
 
-    public boolean addUser(String nome, String email, String senha, double salario, int filhos, boolean sexo) {
+    public boolean addUser(String nome, String email, String senha) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(COL_NOME, nome);
         values.put(COL_EMAIL, email);
         values.put(COL_SENHA, senha);
-        values.put(COL_SALARIO, salario);
-        values.put(COL_FILHO, filhos);
-        values.put(COL_SEXO, sexo);
-
 
         long result = db.insert(TABLE_USUARIOS, null, values);
 

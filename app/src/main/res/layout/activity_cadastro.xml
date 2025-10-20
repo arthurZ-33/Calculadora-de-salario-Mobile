@@ -35,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/edtxtEmailCadastro"
+        android:id="@+id/edtxtEmailCad"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtxtNome" />
 
     <EditText
-        android:id="@+id/edtxtSenhaCadastro"
+        android:id="@+id/edtxtSenhaCad"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
@@ -62,7 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtxtEmailCadastro" />
+        app:layout_constraintTop_toBottomOf="@+id/edtxtEmailCad" />
 
     <Button
         android:id="@+id/btnCadastrar"
@@ -76,7 +76,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtxtSenhaCadastro" />
+        app:layout_constraintTop_toBottomOf="@+id/edtxtSenhaCad" />
 
     <Button
         android:id="@+id/btnTelaLogin"
