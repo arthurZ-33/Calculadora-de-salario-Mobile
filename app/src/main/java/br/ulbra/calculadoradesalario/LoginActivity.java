@@ -1,5 +1,6 @@
 package br.ulbra.calculadoradesalario;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewParent;
@@ -36,6 +37,10 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (loginSucesso) {
                     Toast.makeText(LoginActivity.this, "Bem vindo de volta meu patrão", Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(LoginActivity.this, CalcularSalarioActivity.class);
+                    startActivity(intent);
+                    finish();
 
                 } else {
                     Toast.makeText(LoginActivity.this, "Acesso negado tente novamente", Toast.LENGTH_LONG).show();
