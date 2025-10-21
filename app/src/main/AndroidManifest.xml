@@ -20,6 +20,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".CadastroActivity"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".LoginActivity"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".CalcularSalarioActivity"
+            android:exported="true">
+        </activity>
+
     </application>
 
 </manifest>
